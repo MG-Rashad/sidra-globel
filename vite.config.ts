@@ -1,8 +1,8 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
-  // Change to "node" so Vercel can run it natively
-  nitro: { preset: "node" },
+  // Change to "vercel" so Nitro creates the exact serverless files Vercel needs
+  nitro: { preset: "vercel" },
   
   tanstackStart: {
     server: { entry: "server" },
