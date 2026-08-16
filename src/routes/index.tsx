@@ -11,7 +11,7 @@ import logo from "@/assets/logo.png";
 // --- LOCAL IMAGE IMPORTS (.avif format) ---
 import heroSlide1 from "@/assets/hero-slide-1.avif";
 import heroSlide2 from "@/assets/hero-slide-2.avif";
-import heroSlide3 from "@/assets/hero-slide-4.avif";
+import heroSlide4 from "@/assets/hero-slide-4.avif";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -84,7 +84,7 @@ function Eyebrow({ children }: { children: React.ReactNode }) {
 const HERO_SLIDES = [
   { image: heroSlide1, alt: "Oil refinery at sunset" },
   { image: heroSlide2, alt: "Industrial energy complex" },
-  { image: heroSlide3, alt: "Energy sector pipelines" }
+  { image: heroSlide4, alt: "Energy sector pipelines" }
 ];
 
 function Hero() {
