@@ -11,7 +11,7 @@ import logo from "@/assets/logo.png";
 // --- LOCAL IMAGE IMPORTS (.avif format) ---
 import heroSlide1 from "@/assets/hero-slide-1.avif";
 import heroSlide2 from "@/assets/hero-slide-2.avif";
-import heroSlide3 from "@/assets/hero-slide-3.avif";
+import heroSlide3 from "@/assets/hero-slide-4.avif";
 
 export const Route = createFileRoute("/")({
   head: () => ({
