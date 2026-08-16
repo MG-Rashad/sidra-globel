@@ -88,8 +88,11 @@ const HERO_SLIDES = [
 ];
 
 function Hero() {
-  const { t, lang } = useI18n();
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const { t, lang, dir } = useI18n();
+  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+    loop: true, 
+    direction: dir 
+  });
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   useEffect(() => {
@@ -269,8 +272,6 @@ function Contact() {
     ? "الرمز الاحصائي: 87 - 91595" 
     : "Statistical Code: 87 - 91595";
 
-  // Arabic: Legal Name first (top), then Stat Code below
-  // English: Stat Code first (top), then Legal Name below
   const topLine = lang === "ar" ? legalName : statCode;
   const bottomLine = lang === "ar" ? statCode : legalName;
 
@@ -292,7 +293,6 @@ function Contact() {
             <p className="text-[color:var(--brand-ink)]/80 text-sm leading-relaxed mb-6 max-w-xs">
               {t.footer.tagline}
             </p>
-            {/* Stacked text — follows language direction automatically */}
             <div className="w-full max-w-xs border-t border-black/10 pt-4 flex flex-col gap-1.5">
               <p className="text-xs font-semibold text-[color:var(--brand-brown)]">
                 {topLine}
